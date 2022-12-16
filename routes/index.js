@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const health = require('./health');
+const movie = require('./movie');
+const classification = require('./classification');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
-module.exports = router;
+module.exports = {
+  health,
+  movie,
+  classification
+};
